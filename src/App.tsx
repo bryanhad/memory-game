@@ -82,7 +82,7 @@ export default function App() {
          <div className="flex flex-col items-center justify-center gap-3 text-white pt-8 max-w-[600px] md:max-w-[700px] pb-[50px]">
             <Title />
             <Button shuffleCards={shuffleCards} setLastScore={setLastScore}  />
-            {lastScore !== 0 && cards.length === 0 ? <p>The last game was completed with {lastScore} moves!</p> : ''} 
+            {lastScore !== 0 && cards.length === 0 ? <p>The last game was completed with {lastScore} moves.</p> : ''} 
             {cards.length > 0 && 
             <p>Number of turns : {turns}</p>
             }
