@@ -1,2 +1,2 @@
 # memory-game
-Just a fun little game! made with react~
+Just a fun little game! made with react typescript~
