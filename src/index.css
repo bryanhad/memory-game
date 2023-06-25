@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+    font-family: pokemonFont;
+    src: url('/font/pokemon-emerald.ttf')
+}
+*{
+    font-family: pokemonFont;
+}
+
+.card {
+    position: relative;
+}
+
+.card .front {
+    transition: all ease-in 200ms;
+    transform: rotateY(90deg);
+    position: absolute;
+}
+
+.flipped .front {
+    transform: rotateY(0deg);
+    transition-delay: 200ms;
+}
+
+.card .back {
+    transition: all ease-in 200ms;
+    transform: rotateY(0deg);
+    transition-delay: 200ms;
+}
+
+.flipped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
+  @keyframes matched {
+	0% {
+		transform: scale(1);
+	}
+	70% {
+        transform: scale(0.9);
+        filter: brightness(0.9);
+	}
+	90% {
+        transform: scale(1.1);
+        filter: brightness(1.5);
+	}
+	100% {
+        filter: brightness(1);
+        transform: scale(1);
+	}
+}
+
+.matched {
+    animation: matched 700ms ease-in 200ms;
+}
+
+canvas{
+    width: 100vw;
+    height: 100vh;
+}
